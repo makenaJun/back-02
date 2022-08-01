@@ -22,8 +22,6 @@ export const validateRequestParamsMiddleware = (req: Request, res: Response, nex
             }
         })
 
-    console.log(errorsMessages)
-
     const response: ErrorResponseType = {
         errorsMessages: errorsMessages
     }
