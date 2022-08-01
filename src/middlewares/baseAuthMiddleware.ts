@@ -18,9 +18,9 @@ export const baseAuthMiddleware = (req: Request, res: Response, next: NextFuncti
         if (bytes !== CREDENTIALS) {
             throw new Error('Bad credentials');
         }
-        
+
         next();
     } catch (e) {
-        res.sendStatus(401)
+        return res.sendStatus(401);
     }
 }
